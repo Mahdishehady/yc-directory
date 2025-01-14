@@ -32,7 +32,7 @@ const StartupForm = () => {
   const handleFormSubmit = async (prevState: any, _formData: FormData) => {
     try {
       const formValues = { ...formData, pitch };
-
+      //validate the data
       await formSchema.parseAsync(formValues);
 
       const result = await createPitch(prevState, formValues);
